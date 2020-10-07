@@ -1,28 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package oficinamecanica;
 
-/**
- *
- * @author goiar
- */
 public class Servico {
     private int id;
     private Funcionario responsavel;
     private boolean status;
-    private double preço; 
+    private double preco;
     private String tipo;
     private Veiculo veiculo;
     private ItemServico itemServico[];
 
-    public Servico(int id, Funcionario responsavel, boolean status, double preço, String tipo, Veiculo veiculo, ItemServico[] itemServico) {
+    public Servico(int id, Funcionario responsavel, boolean status, double preco, String tipo, Veiculo veiculo, ItemServico[] itemServico) {
         this.id = id;
         this.responsavel = responsavel;
         this.status = status;
-        this.preço = preço;
+        this.preco = preco;
         this.tipo = tipo;
         this.veiculo = veiculo;
         this.itemServico = itemServico;
@@ -52,12 +43,12 @@ public class Servico {
         this.status = status;
     }
 
-    public double getPreço() {
-        return preço;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setPreço(double preço) {
-        this.preço = preço;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     public String getTipo() {
