@@ -5,31 +5,27 @@
  */
 package oficinamecanica;
 
+import java.util.UUID;
+
 /**
  *
  * @author goiar
  */
 public class Veiculo {
-    private int id;
+    private String id = UUID.randomUUID().toString();
     private String modelo;
     private double kilometragem;
     private String placa;
 
-    public Veiculo(int id, String modelo, double kilometragem, String placa) {
-        this.id = id;
+    public Veiculo(String modelo, double kilometragem, String placa) {
         this.modelo = modelo;
         this.kilometragem = kilometragem;
         this.placa = placa;
     }
-
+    public Veiculo() {}
     
-    
-    public int getId() {
+    public String getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getModelo() {
@@ -55,6 +51,14 @@ public class Veiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "id='" + id + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", kilometragem=" + kilometragem +
+                ", placa='" + placa + '\'' +
+                '}';
+    }
 }

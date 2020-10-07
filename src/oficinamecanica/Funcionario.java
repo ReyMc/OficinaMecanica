@@ -1,22 +1,21 @@
 package oficinamecanica;
 
+import java.util.UUID;
+
 public class Funcionario {
-    private int id;
+    private String id = UUID.randomUUID().toString();
     private String nome;
     private String setor;
 
     public Funcionario(int id, String nome, String setor) {
-        this.id = id;
         this.nome = nome;
         this.setor = setor;
     }
 
-    public int getId() {
-        return id;
-    }
+    public Funcionario() {}
 
-    public void setId(int id) {
-        this.id = id;
+    public String getId() {
+        return id;
     }
 
     public String getNome() {
@@ -34,6 +33,13 @@ public class Funcionario {
     public void setSetor(String setor) {
         this.setor = setor;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "id='" + id + '\'' +
+                ", nome='" + nome + '\'' +
+                ", setor='" + setor + '\'' +
+                '}';
+    }
 }

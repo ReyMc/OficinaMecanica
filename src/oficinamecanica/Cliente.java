@@ -1,24 +1,24 @@
 package oficinamecanica;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public class Cliente {
-    private int id;
+    private String id = UUID.randomUUID().toString();
     private String nome;
-    private Veiculo veiculo;
+    private List<Veiculo> veiculos = new ArrayList<>();
     private String telefone;
 
-    public Cliente(int id, String nome, Veiculo veiculo, String telefone) {
-        this.id = id;
+    public Cliente(String nome, Veiculo veiculo, String telefone) {
         this.nome = nome;
-        this.veiculo = veiculo;
+        this.veiculos.add(veiculo);
         this.telefone = telefone;
     }
 
-    public int getId() {
-        return id;
-    }
+    public Cliente() {}
 
-    public void setId(int id) {
-        this.id = id;
+    public String getId() {
+        return id;
     }
 
     public String getNome() {
@@ -29,12 +29,12 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public Veiculo getVeiculo() {
-        return veiculo;
+    public List<Veiculo> getVeiculoList() {
+        return this.veiculos;
     }
 
-    public void setVeiculo(Veiculo veiculo) {
-        this.veiculo = veiculo;
+    public void setVeiculosList(ArrayList<Veiculo> veiculos) {
+        this.veiculos = veiculos;
     }
 
     public String getTelefone() {
@@ -44,6 +44,18 @@ public class Cliente {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-    
-    
+
+    public void addVeiculo(Veiculo veiculo) {
+        this.veiculos.add(veiculo);
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id='" + id + '\'' +
+                ", nome='" + nome + '\'' +
+                ", veiculos=" + veiculos +
+                ", telefone='" + telefone + '\'' +
+                '}';
+    }
 }

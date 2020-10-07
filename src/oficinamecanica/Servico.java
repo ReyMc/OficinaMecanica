@@ -1,7 +1,10 @@
 package oficinamecanica;
 
+import java.util.Arrays;
+import java.util.UUID;
+
 public class Servico {
-    private int id;
+    private String id = UUID.randomUUID().toString();
     private Funcionario responsavel;
     private boolean status;
     private double preco;
@@ -9,8 +12,7 @@ public class Servico {
     private Veiculo veiculo;
     private ItemServico itemServico[];
 
-    public Servico(int id, Funcionario responsavel, boolean status, double preco, String tipo, Veiculo veiculo, ItemServico[] itemServico) {
-        this.id = id;
+    public Servico(Funcionario responsavel, boolean status, double preco, String tipo, Veiculo veiculo, ItemServico[] itemServico) {
         this.responsavel = responsavel;
         this.status = status;
         this.preco = preco;
@@ -19,12 +21,10 @@ public class Servico {
         this.itemServico = itemServico;
     }
 
-    public int getId() {
-        return id;
-    }
+    public Servico() {}
 
-    public void setId(int id) {
-        this.id = id;
+    public String getId() {
+        return id;
     }
 
     public Funcionario getResponsavel() {
@@ -74,6 +74,17 @@ public class Servico {
     public void setItemServico(ItemServico[] itemServico) {
         this.itemServico = itemServico;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Servico{" +
+                "id='" + id + '\'' +
+                ", responsavel=" + responsavel +
+                ", status=" + status +
+                ", preco=" + preco +
+                ", tipo='" + tipo + '\'' +
+                ", veiculo=" + veiculo +
+                ", itemServico=" + Arrays.toString(itemServico) +
+                '}';
+    }
 }

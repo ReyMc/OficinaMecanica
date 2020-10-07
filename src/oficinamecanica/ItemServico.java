@@ -1,24 +1,24 @@
 package oficinamecanica;
 
+import java.util.UUID;
+
 public class ItemServico {
-    private int id;
+    private String id = UUID.randomUUID().toString();
     private String descricao;
     private boolean finalizada;
     private double preco;
 
-    public ItemServico(int id, String descricao, boolean finalizada, double preco) {
-        this.id = id;
+    public ItemServico(String descricao, boolean finalizada, double preco) {
         this.descricao = descricao;
         this.finalizada = finalizada;
         this.preco = preco;
     }
 
-    public int getId() {
-        return id;
+    public ItemServico() {
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getId() {
+        return id;
     }
 
     public String getDescricao() {
@@ -44,6 +44,14 @@ public class ItemServico {
     public void setPreco(double preco) {
         this.preco = preco;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "ItemServico{" +
+                "id='" + id + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", finalizada=" + finalizada +
+                ", preco=" + preco +
+                '}';
+    }
 }
