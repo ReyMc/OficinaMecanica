@@ -8,9 +8,8 @@ public class ItemServico {
     private boolean finalizada;
     private double preco;
 
-    public ItemServico(String descricao, boolean finalizada, double preco) {
+    public ItemServico(String descricao, double preco) {
         this.descricao = descricao;
-        this.finalizada = finalizada;
         this.preco = preco;
     }
 

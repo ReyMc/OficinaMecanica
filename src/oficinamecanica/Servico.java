@@ -1,27 +1,49 @@
 package oficinamecanica;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class Servico {
     private String id = UUID.randomUUID().toString();
     private Funcionario responsavel;
     private boolean status;
-    private double preco;
+    private double precoTotal;
     private String tipo;
     private Veiculo veiculo;
-    private ItemServico itemServico[];
+    private List<ItemServico> itemServicos = new ArrayList<ItemServico>();
 
-    public Servico(Funcionario responsavel, boolean status, double preco, String tipo, Veiculo veiculo, ItemServico[] itemServico) {
+
+    public Servico(Funcionario responsavel, boolean status, double preco, String tipo, Veiculo veiculo) {
         this.responsavel = responsavel;
         this.status = status;
-        this.preco = preco;
+        this.precoTotal = preco;
         this.tipo = tipo;
         this.veiculo = veiculo;
-        this.itemServico = itemServico;
     }
 
     public Servico() {}
+
+    public boolean addItemServico(ItemServico itemParaAdd){
+        return this.itemServicos.add(itemParaAdd);
+    }
+
+    public ItemServico encontraItemServico(String descricao){
+        for(var item : this.itemServicos){
+            if(item.getDescricao().contains(descricao)){
+                return item;
+            }
+        }
+        return null;
+    }
+
+    public double getTotal(){
+        double total = 0;
+        for(var item : this.itemServicos){
+            total += item.getPreco();
+        }
+        return total;
+    }
 
     public String getId() {
         return id;
@@ -43,12 +65,12 @@ public class Servico {
         this.status = status;
     }
 
-    public double getPreco() {
-        return preco;
+    public double getPrecoTotal() {
+        return precoTotal;
     }
 
-    public void setPreco(double preco) {
-        this.preco = preco;
+    public void setPrecoTotal(double precoTotal) {
+        this.precoTotal = precoTotal;
     }
 
     public String getTipo() {
@@ -67,12 +89,12 @@ public class Servico {
         this.veiculo = veiculo;
     }
 
-    public ItemServico[] getItemServico() {
-        return itemServico;
+    public List<ItemServico> getItemServico() {
+        return itemServicos;
     }
 
-    public void setItemServico(ItemServico[] itemServico) {
-        this.itemServico = itemServico;
+    public void setItemServico(List<ItemServico> itemServicos) {
+        this.itemServicos = itemServicos;
     }
 
     @Override
@@ -81,10 +103,10 @@ public class Servico {
                 "id='" + id + '\'' +
                 ", responsavel=" + responsavel +
                 ", status=" + status +
-                ", preco=" + preco +
+                ", precoTotal=" + this.getTotal() +
                 ", tipo='" + tipo + '\'' +
                 ", veiculo=" + veiculo +
-                ", itemServico=" + Arrays.toString(itemServico) +
+                ", itemServicos=" + itemServicos +
                 '}';
     }
 }
