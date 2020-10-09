@@ -28,7 +28,7 @@ public class Servico {
         return this.itemServicos.add(itemParaAdd);
     }
 
-    public ItemServico encontraItemServico(String descricao){
+    /*public ItemServico encontraItemServico(String descricao){
         for(var item : this.itemServicos){
             if(item.getDescricao().contains(descricao)){
                 return item;
@@ -43,7 +43,7 @@ public class Servico {
             total += item.getPreco();
         }
         return total;
-    }
+    }*/
 
     public String getId() {
         return id;
@@ -103,7 +103,7 @@ public class Servico {
                 "id='" + id + '\'' +
                 ", responsavel=" + responsavel +
                 ", status=" + status +
-                ", precoTotal=" + this.getTotal() +
+                //", precoTotal=" + this.getTotal() +
                 ", tipo='" + tipo + '\'' +
                 ", veiculo=" + veiculo +
                 ", itemServicos=" + itemServicos +
