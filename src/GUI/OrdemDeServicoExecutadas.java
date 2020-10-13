@@ -16,6 +16,7 @@ public class OrdemDeServicoExecutadas extends javax.swing.JFrame {
      */
     public OrdemDeServicoExecutadas() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

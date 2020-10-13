@@ -16,6 +16,7 @@ public class ServicosExecutados extends javax.swing.JFrame {
      */
     public ServicosExecutados() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

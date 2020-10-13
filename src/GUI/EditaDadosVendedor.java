@@ -16,6 +16,7 @@ public class EditaDadosVendedor extends javax.swing.JFrame {
      */
     public EditaDadosVendedor() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

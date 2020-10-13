@@ -16,6 +16,7 @@ public class OrdemDeServicoPendente extends javax.swing.JFrame {
      */
     public OrdemDeServicoPendente() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

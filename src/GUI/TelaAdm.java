@@ -16,6 +16,7 @@ public class TelaAdm extends javax.swing.JFrame {
      */
     public TelaAdm() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

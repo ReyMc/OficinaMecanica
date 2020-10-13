@@ -16,6 +16,7 @@ public class GeraOrdemDeServico extends javax.swing.JFrame {
      */
     public GeraOrdemDeServico() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

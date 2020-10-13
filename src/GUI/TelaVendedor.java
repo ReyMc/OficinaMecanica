@@ -16,6 +16,7 @@ public class TelaVendedor extends javax.swing.JFrame {
      */
     public TelaVendedor() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

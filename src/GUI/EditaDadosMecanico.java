@@ -16,6 +16,7 @@ public class EditaDadosMecanico extends javax.swing.JFrame {
      */
     public EditaDadosMecanico() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

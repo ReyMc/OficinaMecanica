@@ -16,6 +16,7 @@ public class OrdemDeServicoAbertas extends javax.swing.JFrame {
      */
     public OrdemDeServicoAbertas() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
