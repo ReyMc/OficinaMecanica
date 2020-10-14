@@ -2,7 +2,7 @@ package oficinamecanica;
 
 import java.util.UUID;
 
-public class Atendente {
+public class Atendente extends Funcionario{
     private String id = UUID.randomUUID().toString();
     private String funcao;
 

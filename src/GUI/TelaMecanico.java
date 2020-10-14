@@ -17,6 +17,7 @@ public class TelaMecanico extends javax.swing.JFrame {
     public TelaMecanico() {
         initComponents();
         setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**

@@ -17,6 +17,7 @@ public class PaginaInicialLoguin extends javax.swing.JFrame {
     public PaginaInicialLoguin() {
         initComponents();
         setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**

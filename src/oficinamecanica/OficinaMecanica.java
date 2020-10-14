@@ -5,7 +5,9 @@ public class OficinaMecanica {
 
     public static void main(String[] args) {
         testaCodigo();
-        new PaginaInicialLoguin().setVisible(true);
+        PaginaInicialLoguin tl = new PaginaInicialLoguin();
+        tl.setVisible(true);
+
     }
     public static void testaCodigo(){
         /*
